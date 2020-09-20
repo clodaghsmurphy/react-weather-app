@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("celsius");
@@ -20,7 +21,9 @@ export default function WeatherInfo(props) {
   if (unit === "celsius") {
     return (
       <div className="currentTemp">
+        <h1>{props.city}</h1>
         <div className="currentTemp">
+          <WeatherIcon icon={props.data.icon} />
           {Math.round(props.data.temperature)}
           <span>
             °C |{" "}
@@ -43,17 +46,24 @@ export default function WeatherInfo(props) {
     );
   } else {
     return (
-      <div className="currentTemp">
-        <h1>
-          {Math.round(fahrenheit())}
-          <span>
-            <a href="/" onClick={showCelsius}>
-              {" "}
-              °C{" "}
-            </a>{" "}
-            | F
-          </span>
-        </h1>
+      <div className="currenCity">
+        <h1>{props.city}</h1>
+        <WeatherIcon icon={props.data.icon} />
+        {Math.round(fahrenheit())}
+        <a href="/" onClick={showCelsius}>
+          °C |{" "}
+        </a>
+        <span>°F</span>
+        <span className="justify-content-center">
+          <br></br>
+          {props.data.description}
+        </span>
+        <div>
+          <h3>
+            {Math.round(props.data.humidity)} % |
+            {Math.round(props.data.windSpeed)}/kph
+          </h3>
+        </div>
       </div>
     );
   }

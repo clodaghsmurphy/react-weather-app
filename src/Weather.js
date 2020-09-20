@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import WeatherInfo from "./WeatherInfo";
+import "./Weather.css";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   const [weatherData, setweatherData] = useState({ ready: false });
@@ -14,7 +16,6 @@ export default function Weather(props) {
   }
 
   function handleResponse(response) {
-    console.log(response.data);
     setweatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -33,6 +34,7 @@ export default function Weather(props) {
     event.preventDefault();
 
     Search();
+    return null;
   }
 
   function changeCity(event) {
@@ -42,7 +44,7 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="mx-auto">
+      <div className="mt-3 container background p-4">
         <form onSubmit={handleSubmit} className="form-group ">
           <input
             type="search"
@@ -60,16 +62,9 @@ export default function Weather(props) {
           >
             <i className="fas fa-search"></i>
           </button>
-
-          <button
-            type="button"
-            className="btn btn-info "
-            // onChange={updateLocation}
-          >
-            <i className="fas fa-map-marker-alt  "></i>
-          </button>
         </form>
         <WeatherInfo city={city} data={weatherData} />
+        <Forecast city={city} />
       </div>
     );
   } else {
