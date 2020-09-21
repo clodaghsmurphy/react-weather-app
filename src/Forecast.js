@@ -15,8 +15,12 @@ export default function Forecast(props) {
   if (loaded) {
     console.log(forecast);
     return (
-      <div>
-        <WeatherForecastPreview data={forecast.list[0]} />
+      <div className="row d-block-inline mx-auto">
+        <WeatherForecastPreview data={forecast.list[0]} className="col-2" />
+        <WeatherForecastPreview data={forecast.list[1]} className="col-2" />
+        <WeatherForecastPreview data={forecast.list[2]} className="col-2" />
+        <WeatherForecastPreview data={forecast.list[3]} className="col-2" />
+        <WeatherForecastPreview data={forecast.list[4]} className="col-2" />
       </div>
     );
   } else {
