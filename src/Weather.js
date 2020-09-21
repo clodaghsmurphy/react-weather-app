@@ -63,7 +63,7 @@ export default function Weather(props) {
             <i className="fas fa-search"></i>
           </button>
         </form>
-        <WeatherInfo city={city} data={weatherData} />
+        <WeatherInfo data={weatherData} />
         <Forecast city={city} />
       </div>
     );

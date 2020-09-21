@@ -3,16 +3,13 @@ import weatherIcon from "./WeatherIcon";
 
 export default function WeatherForecastPreview(props) {
   function hours() {
+    console.log(props.data);
     let date = new Date(props.data.dt * 1000);
-    console.log(date);
+    let hours = date.getHours();
+    console.log(hours);
 
-    return null;
+    return `${hours}:00`;
   }
 
-  return (
-    <div>
-      {hours}
-      <weatherIcon icon={props.data.weather[0].icon} />;{props.data.main.temp}
-    </div>
-  );
+  return <div>{hours}</div>;
 }

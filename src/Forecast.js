@@ -16,9 +16,7 @@ export default function Forecast(props) {
     console.log(forecast);
     return (
       <div>
-        {" "}
-        {Math.round(forecast.list[0].main.temp)};
-        <WeatherForecastPreview data={forecast} />
+        <WeatherForecastPreview data={forecast.list[0]} />
       </div>
     );
   } else {

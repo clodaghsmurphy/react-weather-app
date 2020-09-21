@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
+import FormattedDate from "./FormattedDate";
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("celsius");
@@ -18,42 +19,44 @@ export default function WeatherInfo(props) {
     return (props.data.temperature * 9) / 5 + 32;
   }
 
-  if (unit === "celsius") {
-    return (
+  return (
+    <div className="currentTemp">
+      <h1>{props.data.city}</h1>
+      <FormattedDate date={props.data.date} />
       <div className="currentTemp">
-        <h1>{props.city}</h1>
-        <div className="currentTemp">
-          <WeatherIcon icon={props.data.icon} />
-          {Math.round(props.data.temperature)}
-          <span>
-            °C |{" "}
-            <a href="/" onClick={showFahrenheit}>
-              °F
-            </a>
-          </span>
-          <span className="justify-content-center">
-            <br></br>
-            {props.data.description}
-          </span>
-          <div>
-            <h3>
-              {Math.round(props.data.humidity)} % |
-              {Math.round(props.data.windSpeed)}/kph
-            </h3>
-          </div>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="currenCity">
-        <h1>{props.city}</h1>
         <WeatherIcon icon={props.data.icon} />
-        {Math.round(fahrenheit())}
-        <a href="/" onClick={showCelsius}>
-          °C |{" "}
-        </a>
-        <span>°F</span>
+        {unit === "celsius"
+          ? Math.round(props.data.temperature)
+          : Math.round(fahrenheit())}
+        <span>
+          <a
+            href="/"
+            onClick={showCelsius}
+            style={
+              unit === "celsius"
+                ? {
+                    color: "black",
+                  }
+                : {}
+            }
+          >
+            °C
+          </a>{" "}
+          |{" "}
+          <a
+            href="/"
+            onClick={showFahrenheit}
+            style={
+              unit === "fahrenheit"
+                ? {
+                    color: "black",
+                  }
+                : {}
+            }
+          >
+            °F
+          </a>
+        </span>
         <span className="justify-content-center">
           <br></br>
           {props.data.description}
@@ -65,6 +68,6 @@ export default function WeatherInfo(props) {
           </h3>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
