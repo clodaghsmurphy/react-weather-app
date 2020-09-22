@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
 import FormattedDate from "./FormattedDate";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("celsius");
@@ -20,15 +21,25 @@ export default function WeatherInfo(props) {
   }
 
   return (
-    <div className="currentTemp">
-      <h1>{props.data.city}</h1>
-      <FormattedDate date={props.data.date} />
-      <div className="currentTemp">
+    <div className="WeatherInfo col">
+      <div className="header col-12">
+        <div className="col  float-right">
+          <div className="float-right ">
+            <h1 className="city">{props.data.city}</h1>
+            <span className=" col float-right">
+              <FormattedDate date={props.data.date} />
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="temperature col-12 d-inline-block">
         <WeatherIcon icon={props.data.icon} />
         {unit === "celsius"
           ? Math.round(props.data.temperature)
           : Math.round(fahrenheit())}
-        <span>
+
+        <span className="unitChange">
           <a
             href="/"
             onClick={showCelsius}
@@ -57,16 +68,24 @@ export default function WeatherInfo(props) {
             °F
           </a>
         </span>
-        <span className="justify-content-center">
-          <br></br>
-          {props.data.description}
-        </span>
-        <div>
-          <h3>
-            {Math.round(props.data.humidity)} % |
-            {Math.round(props.data.windSpeed)}/kph
-          </h3>
+        <div className="row justify-content-center">
+          <div className="description d-inline-block ">
+            {props.data.description}
+            <div className="row justify-content-center">
+              <span className="humidity-wind ">
+                <strong> Humidity</strong>
+                <br></br>
+                {Math.round(props.data.humidity)} %
+              </span>
+              <span className=" humidity-wind ">
+                <strong> Wind Speed</strong>
+                <br></br>
+                {Math.round(props.data.windSpeed)}/kph
+              </span>
+            </div>
+          </div>
         </div>
+        <div className="humidity-wind "></div>
       </div>
     </div>
   );

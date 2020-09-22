@@ -3,7 +3,13 @@ import "./App.css";
 import Weather from "./Weather";
 
 function App() {
-  return <Weather defaultCity="Paris" />;
+  return (
+    <div className="App">
+      <div className="container">
+        <Weather defaultCity="Paris" />;
+      </div>
+    </div>
+  );
 }
 
 export default App;

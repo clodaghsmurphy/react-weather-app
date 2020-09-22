@@ -1,0 +1,48 @@
+.WeatherInfo .header {
+  display: block;
+  float: right;
+}
+
+.WeatherInfo .city {
+  display: inline-block;
+  float: right;
+}
+
+.WeatherInfo .date {
+  display: inline-block;
+  position: relative;
+  text-align: end;
+  left: 60px;
+  font-size: 20px;
+}
+.WeatherInfo .temperature {
+  font-size: 90px;
+  text-align: left;
+
+  display: inline-flex;
+  align-items: flex-start;
+  justify-self: start;
+  margin-inline: 1em;
+  margin-inline-end: 5em;
+}
+
+.WeatherInfo .unitChange {
+  font-size: 30px;
+  margin: auto;
+  position: relative;
+  bottom: 30px;
+  display: inline-block;
+}
+
+.WeatherInfo .description {
+  text-transform: capitalize;
+  font-size: 25px;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.WeatherInfo .humidity-wind {
+  font-size: 15px;
+  margin-bottom: 1em;
+  margin-right: 10px;
+}

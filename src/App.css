@@ -1,11 +1,12 @@
 * {
-  background-image: url("./image/clouds.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  object-fit: contain;
+  text-align: center;
 }
 
 .App {
-  text-align: center;
-  background-image: url("./image/clouds.jpg");
+  height: 100%;
+  width: 50%;
+
+  justify-content: center;
+  display: inline-block;
+  background-repeat: no-repeat;
 }
