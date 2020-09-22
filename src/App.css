@@ -4,7 +4,7 @@
 
 .App {
   height: 100%;
-  width: 50%;
+  max-width: 700px;
 
   justify-content: center;
   display: inline-block;

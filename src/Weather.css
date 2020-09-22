@@ -1,7 +1,7 @@
 .Weather {
   border: none;
   border-radius: 25px;
-  background-color: grey;
+  background-image: url ("./image/paris.jpg");
   margin-top: 80px;
 
   -webkit-box-shadow: 13px 13px 40px 3px rgba(0, 0, 0, 0.47);
