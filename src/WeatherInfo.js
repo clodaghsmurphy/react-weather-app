@@ -46,7 +46,7 @@ export default function WeatherInfo(props) {
             style={
               unit === "celsius"
                 ? {
-                    color: "black",
+                    color: "beige",
                   }
                 : {}
             }
@@ -60,7 +60,7 @@ export default function WeatherInfo(props) {
             style={
               unit === "fahrenheit"
                 ? {
-                    color: "black",
+                    color: "beige",
                   }
                 : {}
             }

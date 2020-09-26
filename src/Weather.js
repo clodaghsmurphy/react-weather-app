@@ -66,7 +66,7 @@ export default function Weather(props) {
           </form>
           <WeatherInfo data={weatherData} />
 
-          <div className="card forecast">
+          <div className="card forecast rounded-3">
             <Forecast city={city} />
           </div>
         </div>
