@@ -1,5 +1,4 @@
-forecast {
-  background-color: green;
+.forecast {
   border-radius: 25px;
   padding: 9px;
   color: black !important;
