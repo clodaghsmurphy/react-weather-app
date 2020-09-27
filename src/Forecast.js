@@ -16,13 +16,13 @@ export default function Forecast(props) {
   if (loaded) {
     console.log(forecast);
     return (
-      <div className="forecast row   mx-auto ">
-        <div className="row cards">
-          <WeatherForecastPreview data={forecast.list[0]} className="col-2" />
-          <WeatherForecastPreview data={forecast.list[1]} className="col-2" />
-          <WeatherForecastPreview data={forecast.list[2]} className="col-2" />
-          <WeatherForecastPreview data={forecast.list[3]} className="col-2" />
-          <WeatherForecastPreview data={forecast.list[4]} className="col-2" />
+      <div className="forecast mx-auto ">
+        <div className="row hourlyForecast ">
+          <WeatherForecastPreview data={forecast.list[0]} className="col" />
+          <WeatherForecastPreview data={forecast.list[1]} className="col" />
+          <WeatherForecastPreview data={forecast.list[2]} className="col" />
+          <WeatherForecastPreview data={forecast.list[3]} className="col" />
+          <WeatherForecastPreview data={forecast.list[4]} className="col" />
         </div>
       </div>
     );

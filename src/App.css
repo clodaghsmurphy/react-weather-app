@@ -3,9 +3,9 @@
 }
 
 .App {
-  height: 50%;
+  height: 50vh;
 
-  width: 100vw;
+  width: 60%;
   font-family: "Montserrat", sans-serif;
   color: beige;
   justify-content: center;
