@@ -16,7 +16,7 @@
   font-size: 20px;
 }
 .WeatherInfo .temperature {
-  font-size: 90px;
+  font-size: 95px;
   text-align: left;
 
   display: inline-flex;
@@ -45,4 +45,9 @@
   font-size: 15px;
   margin-bottom: 1em;
   margin-right: 10px;
+}
+
+.WeatherInfo .mainIcon {
+  margin: 20px;
+  font-size: 90px !important;
 }

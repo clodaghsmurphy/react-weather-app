@@ -33,8 +33,11 @@ export default function WeatherInfo(props) {
         </div>
       </div>
 
-      <div className="temperature col-12 d-inline-block">
-        <WeatherIcon icon={props.data.icon} />
+      <div className="temperature col-12 d-inline-block ">
+        <div className="d-inline mainIcon">
+          <WeatherIcon icon={props.data.icon} />
+        </div>
+
         {unit === "celsius"
           ? Math.round(props.data.temperature)
           : Math.round(fahrenheit())}

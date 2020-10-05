@@ -10,7 +10,7 @@ export default function WeatherForecastPreview(props) {
   return (
     <div className="d-block mx-3 col forecast">
       <div>{hours}:00</div>
-      <div className="mt-3">
+      <div className="mt-3 forecastIcon">
         {" "}
         <WeatherIcon icon={props.data.weather[0].icon} />
       </div>

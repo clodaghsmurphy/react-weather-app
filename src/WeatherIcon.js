@@ -23,5 +23,5 @@ export default function WeatherIcon(props) {
     "50n": "fa-smog",
   };
 
-  return <i className={` forecastIcon fas ${codeMapping[props.icon]}`}> </i>;
+  return <i className={` fas ${codeMapping[props.icon]}`}> </i>;
 }
