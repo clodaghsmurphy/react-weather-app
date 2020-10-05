@@ -11,7 +11,8 @@
     "react-animated-weather": "^4.0.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "react-weathericons": "^1.0.4"
+    "react-weathericons": "^1.0.4",
+    "weather-icons": "git+https://github.com/erikflowers/weather-icons.git"
   },
   "scripts": {
     "start": "react-scripts start",

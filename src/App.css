@@ -1,11 +1,11 @@
 * {
   text-align: center;
+  margin: auto;
 }
 
 .App {
   height: 50vh;
-
-  width: 60%;
+  width: 650px;
   font-family: "Montserrat", sans-serif;
   color: beige;
   justify-content: center;

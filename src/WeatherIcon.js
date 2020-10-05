@@ -1,33 +1,26 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
 
 export default function WeatherIcon(props) {
   const codeMapping = {
-    "01d": "CLEAR_DAY",
-    "01n": "CLEAR_NIGHT",
-    "02d": "PARTLY_CLOUDY_DAY",
-    "02n": "PARTLY_CLOUDY_NIGHT",
-    "03d": "CLOUDY",
-    "03n": "CLOUDY",
-    "04d": "PARTLY_CLOUDY_DAY",
-    "04n": "PARTLY_CLOUDY_NIGHT",
-    "09d": "SLEET",
-    "09n": "SLEET",
-    "10d": "RAIN",
-    "10n": "RAIN",
-    "11d": "WIND",
-    "11n": "WIND",
-    "13d": "SNOW",
-    "13n": "SNOW",
-    "50d": "FOG",
-    "50n": "FOG",
+    "01d": "fa-sun",
+    "01n": "fa-moon",
+    "02d": "fa-cloud-sun",
+    "02n": "fa-cloud-moon",
+    "03d": "fa-cloud",
+    "03n": "fa-cloud",
+    "04d": "fa-cloud",
+    "04n": "fa-cloud",
+    "09d": "fa-cloud-showers-heavy",
+    "09n": "fa-cloud-showers-heavy",
+    "10d": "fa-cloud-sun-rain",
+    "10n": "fa-cloud-moon-rain",
+    "11d": "fa-bolt",
+    "11n": "fa-bolt",
+    "13d": "fa-snowflake",
+    "13n": "fa-snowflake",
+    "50d": "fa-smog",
+    "50n": "fa-smog",
   };
-  return (
-    <ReactAnimatedWeather
-      icon={codeMapping[props.icon]}
-      color="blue"
-      size={90}
-      animate={true}
-    />
-  );
+
+  return <i className={`fas ${codeMapping[props.icon]}`}> </i>;
 }

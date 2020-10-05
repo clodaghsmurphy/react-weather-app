@@ -6,7 +6,6 @@ export default function WeatherForecastPreview(props) {
   let timestamp = new Date(props.data.dt * 1000);
   let hours = timestamp.getHours();
   let temperature = Math.round(props.data.main.temp);
-  console.log(timestamp);
 
   return (
     <div className="d-block mx-3 col forecast">

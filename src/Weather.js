@@ -28,13 +28,13 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       city: response.data.name,
     });
+    console.log(response.data.weather[0].icon);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    Search();
-    return null;
+    setweatherData({ ready: false });
   }
 
   function changeCity(event) {
@@ -74,6 +74,7 @@ export default function Weather(props) {
     );
   } else {
     Search();
+
     return (
       <div className="text-center">
         <div className="spinner-border" role="status"></div>
