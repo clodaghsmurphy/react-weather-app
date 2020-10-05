@@ -12,3 +12,10 @@
   display: inline-block;
   background-repeat: no-repeat;
 }
+
+footer {
+  color: navy;
+  display: block;
+  float: left;
+  font-size: 10px;
+}

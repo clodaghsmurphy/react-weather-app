@@ -1,4 +1,5 @@
 import React from "react";
+import "./forecast.css";
 
 export default function WeatherIcon(props) {
   const codeMapping = {
@@ -22,5 +23,5 @@ export default function WeatherIcon(props) {
     "50n": "fa-smog",
   };
 
-  return <i className={`fas ${codeMapping[props.icon]}`}> </i>;
+  return <i className={` forecastIcon fas ${codeMapping[props.icon]}`}> </i>;
 }

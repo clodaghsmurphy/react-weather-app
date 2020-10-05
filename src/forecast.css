@@ -12,3 +12,7 @@
 .forecast .hourlyForecast {
   margin: auto;
 }
+
+.forecastIcon {
+  font-size: 40px !important;
+}
