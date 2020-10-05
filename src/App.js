@@ -12,6 +12,7 @@ function App() {
         <a
           href="https://github.com/clodaghsmurphy/react-weather-app"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Open source code
         </a>{" "}
@@ -19,6 +20,7 @@ function App() {
         <a
           href="https://www.linkedin.com/in/clodagh-murphy-4a96a715a/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {" "}
           Clodagh Muprhy{" "}
