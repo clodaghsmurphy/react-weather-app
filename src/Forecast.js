@@ -20,17 +20,14 @@ export default function Forecast(props) {
           <WeatherForecastPreview
             data={forecast.list[0]}
             className="card col-4"
-            style="width: 18rem;"
           />
           <WeatherForecastPreview
             data={forecast.list[1]}
             className="card col-4"
-            style="width: 18rem;"
           />
           <WeatherForecastPreview
             data={forecast.list[2]}
             className="card col-4"
-            style="width: 18rem;"
           />
           <WeatherForecastPreview data={forecast.list[3]} className="col" />
           <WeatherForecastPreview data={forecast.list[4]} className="col" />
